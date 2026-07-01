@@ -1,0 +1,61 @@
+# Ghostty configuration
+# Docs: https://ghostty.org/docs/config
+# Reload after editing: Cmd+Shift+Comma (or restart)
+# All options are commented out by default — uncomment to enable.
+
+# ─────────────────────────  Font  ─────────────────────────
+font-family = "Hibur Mono"
+# font-family-bold = "Hibur Mono"
+# font-style = "Regular"
+font-size = 15
+# Hibur Mono ships no bold/italic — disable synthetic (faux) styles,
+# which smear glyphs and look blurry. Bold will render as regular weight.
+font-synthetic-style = false
+
+# ───────────────────────  Window  ─────────────────────────
+window-padding-x = 10
+window-padding-y = 10
+# window-padding-balance = true
+# window-decoration = true
+# window-title-font-family = "JetBrains Mono"
+# macos-titlebar-style = "tabs"
+window-save-state = always
+# confirm-close-surface = false
+
+# ───────────────────────  Theme  ──────────────────────────
+# Run `ghostty +list-themes` to see all options.
+theme = "tokyonight"
+# theme = "GruvboxDark"
+# theme = "catppuccin-mocha"
+# background-opacity = 0.95
+
+# ───────────────────────  Cursor  ─────────────────────────
+cursor-style = block
+cursor-style-blink = false
+
+# ──────────────────────  Scrolling  ───────────────────────
+scrollback-limit = 100000
+# mouse-scroll-multiplier = 3
+
+# ──────────────────────  Clipboard  ───────────────────────
+# copy-on-select = clipboard
+clipboard-read = allow
+clipboard-write = allow
+
+# ────────────────────────  Shell  ─────────────────────────
+# Defaults to your $SHELL. Override here if needed.
+# command = /bin/zsh
+
+# ───────────────────────  Keybinds  ───────────────────────
+# Examples (uncomment to use):
+# keybind = cmd+t=new_tab
+# keybind = cmd+w=close_surface
+# keybind = cmd+shift+t=new_window
+# keybind = cmd+shift+]=next_tab
+# keybind = cmd+shift+[=previous_tab
+
+# ────────────────────────  macOS  ─────────────────────────
+macos-option-as-alt = true
+
+# ────────────────────────  Misc  ──────────────────────────
+# auto-update = check
