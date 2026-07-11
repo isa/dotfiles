@@ -1,22 +1,19 @@
-local g = vim.g
 local o = vim.o
+local opt = vim.opt
 
 -- Better editor UI
 o.termguicolors = true
 o.number = true
 o.cursorline = true
--- o.relativenumber = true
+o.relativenumber = true
 -- o.signcolumn = 'yes:2'
-
--- Number of screen lines to keep above and below the cursor
-o.scrolloff = 8
 
 -- Better editing experience
 o.expandtab = true
 -- o.smarttab = true
 o.cindent = true
 -- o.autoindent = true
-o.wrap = true
+o.wrap = false
 o.textwidth = 300
 o.tabstop = 3
 o.shiftwidth = 0
@@ -27,9 +24,10 @@ o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
 -- Makes neovim and host OS clipboard play nicely with each other
 o.clipboard = 'unnamedplus'
 
--- Case insensitive searching UNLESS /C or capital in search
+-- Search options
 o.ignorecase = true
 o.smartcase = true
+o.inccommand = 'split'
 
 -- Undo and backup options
 o.backup = false
@@ -53,12 +51,19 @@ o.jumpoptions = 'view'
 -- Stable buffer content on window open/close events.
 o.splitkeep = 'screen'
 
--- Improve diff
-vim.opt.diffopt:append('linematch:60')
-
 -- Smooth scrolling
 o.smoothscroll = true
 
--- Map <leader> to space
-g.mapleader = ','
-g.maplocalleader = ','
+-- Number of screen lines to keep above and below the cursor
+o.scrolloff = 8
+o.sidescrolloff = 8
+
+-- Enable Mouse support
+o.mouse = 'nvc'
+
+-- Split screen
+o.splitkeep = 'screen'
+o.jumpoptions = 'view'
+
+-- Improve diff
+opt.diffopt:append('linematch:60')

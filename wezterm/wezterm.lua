@@ -11,7 +11,10 @@ config.font = wezterm.font({
 })
 
 config.font_size = 16
-config.line_height = 1.1
+-- line_height MUST stay 1.0: any other value stretches the cell height without
+-- stretching box-drawing glyphs, so tmux pane borders split at every row
+-- boundary — corners and joints break (wezterm issue #584).
+config.line_height = 1.0
 
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
