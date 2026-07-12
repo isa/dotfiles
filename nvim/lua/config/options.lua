@@ -67,3 +67,29 @@ o.jumpoptions = 'view'
 
 -- Improve diff
 opt.diffopt:append('linematch:60')
+
+-- Automatically switch the directory to the file that I'm editing 
+local cwd_group = vim.api.nvim_create_augroup("FileLocalCwd", { clear = true })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  group = cwd_group,
+  callback = function(args)
+    if vim.v.vim_did_enter == 0 then
+      return
+    end
+
+    if vim.bo[args.buf].buftype ~= "" then
+      return
+    end
+
+    local file = vim.api.nvim_buf_get_name(args.buf)
+    if file == "" then
+      return
+    end
+
+    local dir = vim.fn.fnamemodify(file, ":p:h")
+    if vim.fn.isdirectory(dir) == 1 then
+      vim.cmd.lcd(vim.fn.fnameescape(dir))
+    end
+  end,
+})

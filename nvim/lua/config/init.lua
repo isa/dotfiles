@@ -1,5 +1,4 @@
 require('config.options')
-require('config.pack')
 
 local g = vim.g
 
