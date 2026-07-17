@@ -5,6 +5,18 @@
       "src": "https://github.com/nvim-mini/mini.nvim",
       "version": "'stable'"
     },
+    "nightfox.nvim": {
+      "rev": "4dacd3f0185a2227bdf3b6c0975a8f0bf87cac9a",
+      "src": "https://github.com/EdenEast/nightfox.nvim"
+    },
+    "nvim": {
+      "rev": "05e8787020dcfdb937bf2ff23855ea2415b4e072",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "2c227d59589957fa4404b7de5f61d72c0a78a62d",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"

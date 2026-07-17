@@ -7,4 +7,6 @@ if vim.g.vscode then
 else
    require('plugins.init')
    require('config.init')
+   require('mappings.init')
+   require('lsp.init')
 end
